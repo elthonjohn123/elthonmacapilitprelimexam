@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <nav>
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="subjects.html">Subjects Taken</a></li>
+                <li><a href="enrolled.html">Enrolled</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>About Me</h1>
+        </header>
+
+        <div class="content">
+            <p><strong>Name</strong>: Elthon John S. Macapilit</p>
+            <p><strong>Age</strong>: 19 years old</p>
+            <p><strong>Status</strong>: Single</p>
+            <p><strong>Hobbies</strong>: Playing, Cooking</p>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Elthon John S. Macapilit</p>
+        </footer>
+    </div>
+
+    <img src="1.jpg" alt="Profile Picture" class="profile-picture">
+</body>
+
+<style>
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to bottom, #0a192f, #646262); /* Deep Navy to Black */
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    text-align: center;
+    margin: 0;
+}
+
+.container {
+    background: rgba(40, 40, 60, 0.9); /* Darker Shade for Contrast */
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.6); /* Soft Glow */
+    max-width: 900px;
+    width: 100%;
+}
+
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #f39c12;
+    font-size: 1rem;
+    padding: 8px 12px;
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #e74c3c;
+    text-shadow: 0px 0px 10px rgba(231, 76, 60, 0.8);
+}
+
+
+.content {
+    margin-top: 20px;
+    font-size: 1.1rem;
+}
+
+
+h1 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+}
+
+/* 📸 Profile Picture */
+.profile-picture {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 4px solid white;
+    box-shadow: 0 5px 20px rgba(255, 255, 255, 0.2);
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+
+footer {
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #bbb;
+}
+</style>
+</html>

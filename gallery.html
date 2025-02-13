@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - My Personal Website</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Navigation Bar -->
+        <nav class="top-bar">
+            <ul>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="subjects.html">Subjects Taken</a></li>
+                <li><a href="enrolled.html">Enrolled</a></li>
+                <li><a href="contact.html">Contact Me</a></li>
+                <li><a href="favorites.html">Favorites</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+
+        <header>
+            <h1>Gallery</h1>
+        </header>
+
+        <div class="carousel">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <div class="slides">
+                <div class="slide"><img src="1.jpg" alt="Image 1"></div>
+                <div class="slide"><img src="2.jpg" alt="Image 2"></div>
+                <div class="slide"><img src="3.jpg" alt="Image 3"></div>
+                <div class="slide"><img src="4.jpg" alt="Image 4"></div>
+                <div class="slide"><img src="5.jpg" alt="Image 5"></div>
+                <div class="slide"><img src="6.jpg" alt="Image 6"></div>
+                <div class="slide"><img src="7.jpg" alt="Image 7"></div>
+                <div class="slide"><img src="8.jpg" alt="Image 8"></div>
+                <div class="slide"><img src="9.jpg" alt="Image 9"></div>
+                <div class="slide"><img src="10.jpg" alt="Image 10"></div>
+            </div>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+
+        <footer>
+            <p>&copy; 2023 Elthon John S. Macapilit</p>
+        </footer>
+    </div>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(to bottom, #0a192f, #646262); /* Deep Navy to Black */           
+            color: white;
+            text-align: center;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: auto;
+            padding: 20px;
+            background:linear-gradient(to bottom, #0a192f, #111); /* Deep Navy to Black */
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .top-bar {
+            background: #0a192f;
+            padding: 15px;
+            border-radius: 10px;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        nav ul li {
+            display: inline;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: #f39c12;
+            font-size: 1rem;
+            padding: 8px 12px;
+            transition: color 0.3s ease;
+        }
+
+        nav ul li a:hover {
+            color: #e74c3c;
+        }
+
+        .carousel {
+            position: relative;
+            width: 500px;
+            height: 400px;
+            margin: 20px auto;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .slide {
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .slide img {
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .prev, .next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            font-size: 30px;
+            cursor: pointer;
+            z-index: 10;
+        }
+
+        .prev {
+            left: 10px;
+        }
+
+        .next {
+            right: 10px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        footer {
+            margin-top: 20px;
+            font-size: 0.9rem;
+            color: #aaa;
+        }
+    </style>
+
+    <script>
+        let slideIndex = 0;
+
+        function moveSlide(direction) {
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            slideIndex += direction;
+
+            if (slideIndex >= totalSlides) {
+                slideIndex = 0; 
+            } else if (slideIndex < 0) {
+                slideIndex = totalSlides - 1; 
+            }
+
+            const slidesContainer = document.querySelector('.slides');
+            slidesContainer.style.transform = `translateX(-${slideIndex * 100}%)`;
+        }
+    </script>
+</body>
+</html>
